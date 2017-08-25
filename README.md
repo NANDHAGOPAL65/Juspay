@@ -12,5 +12,5 @@ Touch
 ​/Click​
  generates friction that should decelerate the rotation further by a Y (friction factor)
  
- ### NOTE : Download, Unzip and Open index.html 
+ ### NOTE : Download, Unzip and Open src/index.html 
    
