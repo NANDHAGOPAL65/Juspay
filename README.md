@@ -1,4 +1,4 @@
-Rotating Cube wireframe :     
+# Rotating Cube wireframe :     
 Draw a 3D ​Cube wireframe and rotate it along ​the​ ax​es​ that passes through its center. The rotating object should decelerate at a rate of ‘X’ degrees/sec​^​2 before it comes to a standstill.
 ​
 The object should respond as follows to the following user inputs
@@ -11,3 +11,6 @@ rotation and swipe with the friction factor Y.
 Touch
 ​/Click​
  generates friction that should decelerate the rotation further by a Y (friction factor)
+ 
+ # NOTE : Download, Unzip and Open index.html 
+   
