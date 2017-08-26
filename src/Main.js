@@ -949,7 +949,7 @@ var PS = {};
       return function (x) {
           return function (y) {
               return function (z) {
-                  var rad = (angle * $$Math.pi) / 180.0;
+                  var rad = (angle * $$Math.pi) / 90.0;
                   var cosa = $$Math.cos(rad);
                   var sina = $$Math.sin(rad);
                   var xx = z * sina + x * cosa;
@@ -963,7 +963,7 @@ var PS = {};
       return function (x) {
           return function (y) {
               return function (z) {
-                  var rad = (angle * $$Math.pi) / 180.0;
+                  var rad = (angle * $$Math.pi) / 90.0;
                   var cosa = $$Math.cos(rad);
                   var sina = $$Math.sin(rad);
                   var yy = y * cosa - z * sina;
@@ -1064,7 +1064,7 @@ var PS = {};
                       };
                   }))();
                   var v2 = Graphics_Canvas.setFillStyle("rgb(102,51,153)")(ctx)();
-                  var v3 = Graphics_Canvas.setStrokeStyle("rgb(0, 0, 0)")(ctx)();
+                  var v3 = Graphics_Canvas.setStrokeStyle("rgb(255, 0, 0)")(ctx)();
                   return Data_Functor["void"](Control_Monad_Eff.functorEff)(Control_Monad_Eff.forE(0)(6)(function (i) {
                       var m_i_face = Data_Array.index(faces)(i);
                       var i_face = Data_Maybe.fromMaybe([  ])(m_i_face);
@@ -1131,7 +1131,7 @@ var PS = {};
                   var v1 = Graphics_Canvas.getContext2D(v.value0)();
                   var v2 = Element.body();
                   var v3 = Element.getElementById("canvas")();
-                  var v4 = Graphics_Canvas.setFillStyle("rgb(39, 40, 34)")(v1)();
+                  var v4 = Graphics_Canvas.setFillStyle("rgb(60, 160, 40)")(v1)();
                   var v5 = Control_Monad_ST.newSTRef(false)();
                   var v6 = Control_Monad_ST.newSTRef(0.0)();
                   var v7 = Control_Monad_ST.newSTRef(0.0)();
@@ -1212,7 +1212,7 @@ var PS = {};
                   return updateCube();
               };
           };
-          throw new Error("Failed pattern match at Main line 163, column 3 - line 164, column 3: " + [ v.constructor.name ]);
+          throw new Error("Failed pattern match at Main line 162, column 3 - line 163, column 3: " + [ v.constructor.name ]);
       })())();
   });
   exports["add"] = add;

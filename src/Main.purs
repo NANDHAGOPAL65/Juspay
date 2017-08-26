@@ -32,7 +32,7 @@ qz = pi/4.0
 
 
 rotateX angle x y z = do
-  let rad = angle * pi / 180.0
+  let rad = angle * pi / 90.0
   let cosa = cos rad
   let sina = sin rad
   let yy = y * cosa - z * sina
@@ -41,7 +41,7 @@ rotateX angle x y z = do
 
 
 rotateY angle x y z = do
-  let rad = angle * pi / 180.0
+  let rad = angle * pi / 90.0
   let cosa = cos rad
   let sina = sin rad
   let xx = z * sina + x * cosa
@@ -88,7 +88,6 @@ stroke v00 v01 v10 v11 v20 v21 v30 v31 ctx = do
   void $ pushSTArray r 1
 
 
-
 drawCube vertices faces ctx = do
     _ <- clearRect ctx { x: 0.0, y: 0.0, w: 650.0, h: 650.0 }
     verticesPixLoc <- emptySTArray
@@ -117,7 +116,7 @@ drawCube vertices faces ctx = do
         }
       void $ pushSTArray verticesPixLoc [pix0,pix1]
     _ <- setFillStyle "rgb(102,51,153)" ctx
-    _ <- setStrokeStyle "rgb(0, 0, 0)" ctx
+    _ <- setStrokeStyle "rgb(255, 0, 0)" ctx
     void $ forE 0 6 $ \i ->  do
       let m_i_face = faces !! i
       let i_face = fromMaybe [] m_i_face
@@ -167,7 +166,7 @@ main = void $ unsafePartial do
 
   canvas_jq <- J.getElementById "canvas"
 
-  _ <- setFillStyle "rgb(39, 40, 34)" ctx
+  _ <- setFillStyle "rgb(60, 160, 40)" ctx
   drag <- newSTRef false
   old_x <- newSTRef 0.0
   old_y <- newSTRef 0.0
